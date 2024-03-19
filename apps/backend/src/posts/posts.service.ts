@@ -213,7 +213,7 @@ export class PostsService {
       if (!category) throw new Error('Category not found!');
     }
 
-    if (updatePostDto?.tagNames.length) {
+    if (updatePostDto?.tagNames && updatePostDto?.tagNames?.length) {
       targetPost.tags = await Promise.all(
         updatePostDto.tagNames.map((tagName) =>
           this.tagsService.getOrCreateTag({ name: tagName }),

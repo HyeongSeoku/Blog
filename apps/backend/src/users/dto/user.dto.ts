@@ -4,10 +4,7 @@ import {
   IsNotEmpty,
   IsEmail,
   Matches,
-  IsDate,
-  IsBoolean,
-  isNumber,
-  IsNumber,
+  Length,
 } from 'class-validator';
 import { Users } from 'src/database/entities/user.entity';
 
@@ -15,7 +12,7 @@ import { Users } from 'src/database/entities/user.entity';
 export class CreateUserDto {
   @IsNotEmpty()
   @IsString()
-  @MinLength(4)
+  @Length(4, 50)
   username: string;
 
   @IsNotEmpty()

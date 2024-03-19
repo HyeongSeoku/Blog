@@ -3,10 +3,13 @@ import {
   IsArray,
   IsNotEmpty,
   IsNumber,
+  IsOptional,
   IsString,
+  Length,
 } from 'class-validator';
 
 export class CreatePostDto {
+  @Length(1, 255)
   @IsNotEmpty()
   @IsString()
   title: string;
@@ -20,8 +23,8 @@ export class CreatePostDto {
   categoryId: number;
 
   @IsArray()
-  @ArrayNotEmpty()
   @IsString({ each: true })
+  @IsOptional()
   tagNames?: string[];
 }
 
