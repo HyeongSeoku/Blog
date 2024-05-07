@@ -42,6 +42,15 @@ export class Users {
   })
   isAdmin: boolean;
 
+  @Column({ name: 'github_id', length: 255, nullable: false })
+  githubId: string;
+
+  @Column({ name: 'github_img_url', length: 255, nullable: true })
+  githubImgUrl: string;
+
+  @Column({ name: 'github_profile_url', length: 255 })
+  githubProfileUrl: string;
+
   // 팔로워 관계
   @OneToMany(() => Followers, (follower) => follower.follower)
   followers: Followers[];
