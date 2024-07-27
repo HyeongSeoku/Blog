@@ -30,7 +30,7 @@ import {
 } from "src/constants/cookie.constants";
 import { UsersService } from "src/users/users.service";
 import { JwtAuthGuard } from "../guards/jwt-auth.guard";
-import { AuthenticatedRequest } from "./auth.interface";
+import { AuthenticatedRequest, FindOrCreateUserByGithubResponse } from "./auth.interface";
 import { RateLimit } from "nestjs-rate-limiter";
 import { Request as ExpressRequest, Request, Response } from "express";
 import {
@@ -42,7 +42,7 @@ import { RefreshTokenService } from "src/refresh-token/refresh-token.service";
 import { GithubAuthGuard } from "src/guards/github-auth.guard";
 import { v4 as uuidv4 } from "uuid";
 import { clearCookie, setCookie } from "src/utils/cookie";
-import { FindOrCreateUserByGithubResponse } from "../../../../types/users/users.api";
+ 
 
 @Controller("auth")
 export class AuthController {

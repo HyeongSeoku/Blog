@@ -1,14 +1,44 @@
-# 의존성
-/node_modules/
+# compiled output
+/dist
+/node_modules
 
-# FE 빌드 디렉토리
-.next/
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
 
-# BE 빌드 디렉토리
-dist/
+# OS
+.DS_Store
 
-# Turbo 캐시 및 임시 파일
-.turbo/
+# Tests
+/coverage
+/.nyc_output
 
-# 공통 환경 설정 파일
-.env
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+#env
+.env*
+
+#cert
+/cert
+
+
+.scannerwork
